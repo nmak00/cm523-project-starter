@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- PUT A TITLE IN HERE -->
-    <title>This is the demo</title>
+
+    <title>fawnoverfaan</title>
     <!-- PUT A DESCRIPTION IN HERE -->
-    <meta name="description" content="describe content of the page here...." />
+    <meta name="description" content="explore alternate Asian cuisines" />
     <!-- LINK TO NORMALIZE (FOR CONSISTENCY) -->
     <link rel="stylesheet" href="styles.normalize.css" />
     <!-- LINK TO ANY FRAMEWORK STYLES HERE-->
@@ -19,6 +19,114 @@
   </head>
   <body>
     <!-- YOUR HTML GOES HERE -->
+
+    <section id='headerBox'>
+      <header>
+        <h1> fawn </h1>
+        <h1> faan </h1>
+        <p>fawn•over•faan aims to help navigate a different world of Asian cuisines. As incredibly diverse as Asian food goes, there is always room for improvement when considering dietary restrictions or one's location. This website is for those who want to find substitutes for their favorite dishes, or just want to try something new. </p>
+      </header>
+    
+      <div class="startcontrols">
+        <h3> give me: </h3>
+        <button id="ing-btn" class="btn"> ingredients </button>
+        <button id="rec-btn" class="btn">recipes </button>
+      </div>
+    
+    </section>
+    
+   
+      <fieldset id="qIngredient" class="hide promptcontainer">
+        <h3> choose an ingredient:
+        </h3>
+        <div  class="btn-grid">
+          
+          <input type="checkbox" name="ingChoice" id="ingChoiceSS" value="soysauce"> soy sauce
+          <input type="checkbox" name="ingChoice" id="ingChoiceOS" value="oystersauce"> oyster sauce
+          <input type="checkbox" name="ingChoice" id="ingChoiceBeef" value="beef"> beef
+          <input type="checkbox" name="ingChoice" id="ingChoiceChicken" value="chicken"> chicken
+          <input type="checkbox" name="ingChoice" id="ingChoiceFS" value="fishsauce"> fish sauce
+          <input type="checkbox" name="ingChoice" id="ingChoiceDashi" value="dashi"> dashi
+          <input type="checkbox" name="ingChoice" id="ingChoiceBamboo" value="bamboo"> bamboo
+          <input type="checkbox" name="ingChoice" id="ingChoiceNoodles" value="noodles"> noodles 
+          <input type="checkbox" name="ingChoice" id="ingChoiceGCJ" value="gochujang"> gochujang 
+                
+        </div>
+       <button name= "next-btn" class="btn"> &gt; </button>
+      </fieldset>
+
+      
+      <fieldset id="qBudget" class="promptcontainer hide">
+        <h3> choose a budget:
+        </h3>
+        <div  class="btn-grid ">
+          <input type="checkbox" name="bgtChoice" id="bgt1" value="$20"> &gt; $20
+          <input type="checkbox" name="bgtChoice" id="bgt2" value="$30-$40"> $30-$40
+          <input type="checkbox" name="bgtChoice" id="bgt3" value="$40-$50"> $40-$50
+          <input type="checkbox" name="bgtChoice" id="bgt4" value="$50-$70"> $50-$70
+          <input type="checkbox" name="bgtChoice" id="bgt5" value="$80-$100"> $80-$100
+          <input type="checkbox" name="bgtChoice" id="bgt6" value="$100+"> $100+
+        </div>
+    
+           <button name= "next-btn" class="btn"> &gt; </button>
+      </fieldset>
+    
+      <fieldset id="qDiet" class="promptcontainer hide">
+        <h3> choose a dietary preference:
+        </h3>
+        <div  class="btn-grid">
+          <input type="checkbox" name="dietChoice" id="dietChoiceKsh" value="kosher"> kosher
+          <input type="checkbox" name="dietChoice" id="dietChoiceVgt" value="vegetarian"> vegetarian
+          <input type="checkbox" name="dietChoice" id="dietChoiceVgn" value="vegan"> vegan
+          <input type="checkbox" name="dietChoice" id="dietChoiceKto" value="keto"> keto
+          <input type="checkbox" name="dietChoice" id="dietChoiceNtF" value="nut-free"> nut-free
+          <input type="checkbox" name="dietChoice" id="dietChoiceSF" value="soy-free"> soy-free
+        </div>
+    
+        <button name="result-btn" class="btn"> show my results </button>
+      </fieldset>
+   
+    
+    <section id="optionRecipes" class="hide">
+      <fieldset id="recipeBudget" class="promptcontainer hide">
+        <h3> choose a budget:
+        </h3>
+        <div  class="btn-grid">
+          <input type="checkbox" name="bgtChoice" id="bgt1" value="$20"> &gt; $20
+          <input type="checkbox" name="bgtChoice" id="bgt2" value="$30-$40"> $30-$40
+          <input type="checkbox" name="bgtChoice" id="bgt3" value="$40-$50"> $40-$50
+          <input type="checkbox" name="bgtChoice" id="bgt4" value="$50-$70"> $50-$70
+          <input type="checkbox" name="bgtChoice" id="bgt5" value="$80-$100"> $80-$100
+          <input type="checkbox" name="bgtChoice" id="bgt6" value="$100+"> $100+
+        </div>
+    
+        <button name= "next-btn" class="btn"> &gt; </button>
+       
+      </fieldset>
+    
+      <fieldset id="recipeDiet" class="promptcontainer hide">
+        <h3> choose a dietary preference:
+        </h3>
+        <div  class="btn-grid hide">
+          <input type="checkbox" name="dietChoice" id="recChoiceKsh" value="kosher"> kosher
+          <input type="checkbox" name="dietChoice" id="recChoiceVgt" value="vegetarian"> vegetarian
+          <input type="checkbox" name="dietChoice" id="recChoiceVgn" value="vegan"> vegan
+          <input type="checkbox" name="dietChoice" id="recChoiceKto" value="keto"> keto
+          <input type="checkbox" name="dietChoice" id="recChoiceNtF" value="nut-free"> nut-free
+          <input type="checkbox" name="dietChoice" id="recChoiceSF" value="soy-free"> soy-free
+        </div>
+    
+       <button name="result-btn" class="btn"> show my results </button>
+        
+      </fieldset>
+    </section>
+    
+    <section class="result">
+      <h3></h3>
+    </section>
+    
+    
+    
 
     <!-- YOUR EXTERNAL PLUG-IN MAY ASK YOU TO PUT A SCRIPT TAG HERE. -->
   </body>

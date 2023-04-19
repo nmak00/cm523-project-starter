@@ -1,9 +1,41 @@
 /* ===== YOUR CSS GOES HERE ===== */
 /* ===== START WITH GLOBAL STYLES THEN USE MEDIA QUERIES FOR LAYOUT ADJUSTMENTS ===== */
 
-body {
-    background: magenta;
+*,
+*::before,
+*::after
+{
+  box-sizing: border-box; 
 }
-p {
-    font-size: 2em;
+
+body{
+  font-family:sans-serif; 
 }
+
+
+
+.startcontrols button
+{
+  border-radius:25px; 
+  background: orange;
+  border: orange solid; 
+  width: 8em;  
+}
+
+.hide
+{
+  display: none; 
+}
+
+fieldset
+{
+  display: block; 
+  position: absolute;
+  top: 0; 
+  width: 100%; 
+  height: 100vh; 
+  z-index: -1; 
+  border: none; 
+  background:white; 
+}
+
