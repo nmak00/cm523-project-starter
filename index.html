@@ -21,26 +21,26 @@
   </head>
   <body>
 
-    <section id='headerBox'>
-      <header>
+    <header action="result.html" id='headerBox'>
+      
         <a href = "index.html" id="siteName">
         <h1 id="fawn"> fawn </h1>
         <hr id ="overLine">
         <h1 id="faan"> faan </h1>
         </a>
 
-        <p id="subheading">fawn•over•faan aims to help navigate a different world of Asian cuisines. As incredibly diverse as Asian food goes, there is always room for improvement when considering dietary restrictions or one's location. This website is for those who want to find substitutes for their favorite dishes, or just want to try something new. </p>
-      </header>
-      
-      <div class="startcontrols">
+        <div id = "subheading">
+        <p >fawn•over•faan aims to help navigate a different world of Asian cuisines. As incredibly diverse as Asian food goes, there is always room for improvement when considering dietary restrictions or one's location. This website is for those who want to find substitutes for their favorite dishes, or just want to try something new. </p>
+       <div class="startcontrols">
         <h3> give me: </h3>
         <button id="ing-btn" class="btn"> ingredients </button>
         <button id="rec-btn" class="btn">recipes </button>
+        </div>
       </div>
     
-    </section>
+    </header>
     
-    <div class ="slideBox hide" id = "ingSlide" >
+    <form  class ="slideBox hide " id = "ingSlide" >
     <ul class = "slider ">
   
       <li id="qIngredient" class=" promptcontainer">
@@ -92,17 +92,17 @@
          <label class="checkmark">  <input type="checkbox" name="dietChoice" id="dietChoiceSF" value="soy-free"> <span class = "btnName">soy-free</label>
         </div>
     
-        <button name="result-btn" class="btn res-btn"> <a href="results.html">show my results</a> </button>
+        <button  name="result-btn" class="btn res-btn"> <a>show my results</a> </button>
       </li>
    
       
     </ul>
     
-  </div>
+  </form>
             
 
 
-  <div class ="slideBox hide" id= "recSlide" >
+  <form action="results.html" class ="slideBox hide" id= "recSlide" >
     <ul class = "slider ">
   
       <li id="qCuisine" class=" promptcontainer">
@@ -113,7 +113,7 @@
          <label class="checkmark" > <input type="checkbox" name="cuisineChoice" id="cuisineChoiceSS" value="eastasian"> <span class = "btnName">East Asian</span> </label> 
          <label class="checkmark"> <input type="checkbox" name="cuisineChoice" id="cuisineChoiceOS"  value="southasian"> <span class = "btnName">South Asian</span></label> 
          <label class="checkmark"> <input type="checkbox" name="cuisineChoice" id="cuisineChoiceBeef" value="southeastasian"><span class = "btnName"> Southeast Asian </span></label> 
-         <label class="checkmark"> <input type="checkbox" name="cuisineChoice" id="cuisineChoiceChicken" value="centralasian"><span class = "btnName"> Central Asian </span></label> 
+         <label class="checkmark"> <input type="checkbox" name="cuisineChoice" id="cuisineChoiceChicken" value="centralasian"><span class = "btnName"> Middle Eastern </span></label> 
 
                 
         </div>
@@ -146,20 +146,38 @@
          <label class="checkmark">  <input type="checkbox" name="dietChoice" id="dietChoiceSF" value="soy-free"> <span class = "btnName">soy-free</label>
         </div>
     
-        <button name="result-btn" class="btn res-btn"> <a href="results.html">show my results</a> </button>
+        <button name="result-btn" class="btn res-btn"> show my results </button>
       </li>
    
       
     </ul>
     
-  </div>
+  </form>
+
+    <ul class="navlist">
+      <li><a> about </a></li>
+      <li><a> project proposal</a></li>
+      <li><a>wireframe</a></li>
+      <li><a>ux report</a></li>
+    </ul>
+
+  
 
    
     <!-- YOUR EXTERNAL PLUG-IN MAY ASK YOU TO PUT A SCRIPT TAG HERE. -->
     <script  src="https://code.jquery.com/jquery-3.6.4.min.js"   integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="   crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script type="text/javascript"> 
-    $('.slider').slick();
+    $('.slider').slick({
+  vertical:true,
+  dots:true,
+  infinite: false,
+  arrows:false,
+  accessibility:true,
+  verticalSwiping:true,
+  
+});
+ 
   </script>
 
 
