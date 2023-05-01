@@ -13,15 +13,21 @@
    
     <!-- LINK TO ANY FRAMEWORK STYLES HERE-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css">
-   
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
     
     <script src="scripts/scripts.js" defer></script>
    
   </head>
-  <body>
 
-    <header action="result.html" id='headerBox'>
+  
+  <body id="body">
+
+    <header id='headerBox'>
       
         <a href = "index.html" id="siteName">
         <h1 id="fawn"> fawn </h1>
@@ -30,7 +36,7 @@
         </a>
 
         <div id = "subheading">
-        <p >fawn•over•faan aims to help navigate a different world of Asian cuisines. As incredibly diverse as Asian food goes, there is always room for improvement when considering dietary restrictions or one's location. This website is for those who want to find substitutes for their favorite dishes, or just want to try something new. </p>
+        <p ><strong></strong>fawn•over•faan aims to help navigate a different world of Asian cuisines. As wonderfully diverse as they are, it might be daunting for someone with a different diet, or someone who might not have specific ingredients easily available. This website is for those who want to find substitutes for their favorite dishes, or just want to try something new. </p>
        <div class="startcontrols">
         <h3> give me: </h3>
         <button id="ing-btn" class="btn"> ingredients </button>
@@ -40,7 +46,7 @@
     
     </header>
     
-    <form  class ="slideBox hide " id = "ingSlide" >
+    <form  action="results.html" class ="slideBox hide " id = "ingSlide" >
     <ul class = "slider ">
   
       <li id="qIngredient" class=" promptcontainer">
@@ -48,17 +54,16 @@
         </h3>
         <div  class="btn-grid">
           
-         <label class="checkmark" > <input type="checkbox" name="ingChoice" id="ingChoiceSS" value="soysauce"> <span class = "btnName">soy sauce</span> </label> 
-         <label class="checkmark"> <input type="checkbox" name="ingChoice" id="ingChoiceOS"  value="oystersauce"> <span class = "btnName">oyster sauce</span></label> 
-         <label class="checkmark"> <input type="checkbox" name="ingChoice" id="ingChoiceBeef" value="beef"><span class = "btnName"> beef </span></label> 
-         <label class="checkmark"> <input type="checkbox" name="ingChoice" id="ingChoiceChicken" value="chicken"><span class = "btnName"> chicken </span></label> 
-         <label class="checkmark"> <input type="checkbox" name="ingChoice" id="ingChoiceFS" value="fishsauce"> <span class = "btnName">fish sauce</span></label> 
-         <label class="checkmark"> <input type="checkbox" name="ingChoice" id="ingChoiceDashi" value="dashi"> <span class = "btnName">dashi</span></label> 
-         <label class="checkmark"> <input type="checkbox" name="ingChoice" id="ingChoiceBamboo" value="bamboo"> <span class = "btnName">bamboo</span></label> 
-         <label class="checkmark"> <input type="checkbox" name="ingChoice" id="ingChoiceNoodles" value="noodles"> <span class = "btnName">noodles</span></label>  
-         <label class="checkmark"> <input type="checkbox" name="ingChoice" id="ingChoiceGCJ" value="gochujang"> <span class = "btnName">gochujang</span></label>  
-         <label class="checkmark"> <input type="checkbox" name="ingChoice" id="ingChoiceRice" value="rice"> <span class = "btnName">rice</span></label> 
-         <label class="checkmark"> <input type="checkbox" name="ingChoice" id="ingChoiceSquid" value="squid"> <span class = "btnName">squid</span></label>  
+         <label class="checkmark" > <input type="checkbox"  name="ingChoice"  class = "choiceBtn"id="ingChoiceSS" value="soysauce"> soy sauce</label> 
+         <label class="checkmark"> <input type="checkbox"  name="ingChoice"  class = "choiceBtn"id="ingChoiceOS"  value="oystersauce"> oyster sauce</label> 
+         <label class="checkmark"> <input type="checkbox"  name="ingChoice" class = "choiceBtn" id="ingChoiceTofu" value="tofu">tofu </label> 
+         <label class="checkmark"> <input type="checkbox"  name="ingChoice" class = "choiceBtn" id="ingChoiceFS" value="fishsauce"> fish sauce</label> 
+         <label class="checkmark"> <input type="checkbox"  name="ingChoice"  class = "choiceBtn"id="ingChoiceDashi" value="dashi"> dashi</label> 
+         <label class="checkmark"> <input type="checkbox"  name="ingChoice"  class = "choiceBtn"id="ingChoiceBamboo" value="bamboo"> bamboo</label> 
+         <label class="checkmark"> <input type="checkbox"  name="ingChoice"  class = "choiceBtn"id="ingChoiceNoodles" value="noodles"> noodles</label>  
+         <label class="checkmark"> <input type="checkbox"  name="ingChoice" class = "choiceBtn" id="ingChoiceGCJ" value="gochujang"> gochujang</label>  
+         <label class="checkmark"> <input type="checkbox"  name="ingChoice" class = "choiceBtn" id="ingChoiceRice" value="rice"> rice</label> 
+         <label class="checkmark"> <input type="checkbox"  name="ingChoice" class = "choiceBtn" id="ingChoiceSquid" value="squid"> squid</label>  
       
                 
         </div>
@@ -69,12 +74,12 @@
         </h3>
         <div  class="btn-grid ">
           
-          <label class="checkmark" check> <input type="checkbox" name="bgtChoice" id="bgt1" value="$20"> <span class = "btnName">&gt; $20</span></label> 
-          <label class="checkmark"> <input type="checkbox" name="bgtChoice" id="bgt2" value="$30-$40"> <span class = "btnName">$30-$40</span></label>
-          <label class="checkmark"> <input type="checkbox" name="bgtChoice" id="bgt3" value="$40-$50"> <span class = "btnName"> $40-$50</span></label>
-          <label class="checkmark"> <input type="checkbox" name="bgtChoice" id="bgt4" value="$50-$70"> <span class = "btnName">$50-$70</span></label>
-          <label class="checkmark"> <input type="checkbox" name="bgtChoice" id="bgt5" value="$80-$100"><span class = "btnName"> $80-$100</span></label>
-          <label class="checkmark"> <input type="checkbox" name="bgtChoice" id="bgt6" value="$100+"> <span class = "btnName">$100+</span></label> 
+          <label class="checkmark"> <input  type="checkbox" name="bgtChoice"  class = "choiceBtn" id="bgt1" value="$20">  $20</label> 
+          <label class="checkmark"> <input type="checkbox" name="bgtChoice"  class = "choiceBtn" id="bgt2" value="$30-$40"> $30-$40</label>
+          <label class="checkmark"> <input type="checkbox" name="bgtChoice" class = "choiceBtn"  id="bgt3" value="$40-$50">  $40-$50</label>
+          <label class="checkmark"> <input type="checkbox" name="bgtChoice"  class = "choiceBtn" id="bgt4" value="$50-$70"> $50-$70</label>
+          <label class="checkmark"> <input type="checkbox" name="bgtChoice" class = "choiceBtn"  id="bgt5" value="$80-$100"> $80-$100</label>
+          <label class="checkmark"> <input type="checkbox" name="bgtChoice" class = "choiceBtn"  id="bgt6" value="$100+"> $100+</label> 
         </div>
 
       </li>
@@ -84,12 +89,12 @@
         <h3> choose a dietary preference:
         </h3>
         <div  class="btn-grid">
-         <label class="checkmark">  <input type="checkbox" name="dietChoice" id="dietChoiceKsh" value="kosher"> <span class = "btnName">kosher</label>
-         <label class="checkmark">  <input type="checkbox" name="dietChoice" id="dietChoiceVgt" value="vegetarian"><span class = "btnName">vegetarian</label>
-         <label class="checkmark">  <input type="checkbox" name="dietChoice" id="dietChoiceVgn" value="vegan"> <span class = "btnName">vegan</label>
-         <label class="checkmark">  <input type="checkbox" name="dietChoice" id="dietChoiceKto" value="keto"><span class = "btnName"> keto</label>
-         <label class="checkmark">  <input type="checkbox" name="dietChoice" id="dietChoiceNtF" value="nut-free"><span class = "btnName"> nut-free</label>
-         <label class="checkmark">  <input type="checkbox" name="dietChoice" id="dietChoiceSF" value="soy-free"> <span class = "btnName">soy-free</label>
+         <label class="checkmark">  <input type="checkbox" name="dietChoice" class = "choiceBtn"  id="dietChoiceVgt" value="vegetarian">vegetarian</label>
+         <label class="checkmark">  <input type="checkbox" name="dietChoice"  class = "choiceBtn" id="dietChoiceVgn" value="vegan">vegan</label>
+         <label class="checkmark">  <input type="checkbox" name="dietChoice"  class = "choiceBtn" id="dietChoiceKto" value="keto"> keto</label>
+         <label class="checkmark">  <input type="checkbox" name="dietChoice"  class = "choiceBtn" id="dietChoiceNtF" value="nut-free"> nut-free</label>
+         <label class="checkmark">  <input type="checkbox" name="dietChoice"  class = "choiceBtn" id="dietChoiceSF" value="soy-free">soy-free</label>
+          <label class="checkmark">  <input type="checkbox" name="dietChoice" class = "choiceBtn"  id="dietChoiceNone" value="none">none</label>
         </div>
     
         <button  name="result-btn" class="btn res-btn"> <a>show my results</a> </button>
@@ -97,7 +102,8 @@
    
       
     </ul>
-    
+    <p class="tip"> *scroll if dot controls are missing</p>
+
   </form>
             
 
@@ -110,10 +116,10 @@
         </h3>
         <div  class="btn-grid">
           
-         <label class="checkmark" > <input type="checkbox" name="cuisineChoice" id="cuisineChoiceSS" value="eastasian"> <span class = "btnName">East Asian</span> </label> 
-         <label class="checkmark"> <input type="checkbox" name="cuisineChoice" id="cuisineChoiceOS"  value="southasian"> <span class = "btnName">South Asian</span></label> 
-         <label class="checkmark"> <input type="checkbox" name="cuisineChoice" id="cuisineChoiceBeef" value="southeastasian"><span class = "btnName"> Southeast Asian </span></label> 
-         <label class="checkmark"> <input type="checkbox" name="cuisineChoice" id="cuisineChoiceChicken" value="centralasian"><span class = "btnName"> Middle Eastern </span></label> 
+         <label class="checkmark" > <input type="checkbox" name="cuisineChoice"  class = "choiceBtn" id="cuisineChoiceSS" value="eastasian"> East Asian</span> </label> 
+         <label class="checkmark"> <input type="checkbox" name="cuisineChoice"  class = "choiceBtn" id="cuisineChoiceOS"  value="southasian"> South Asian</span></label> 
+         <label class="checkmark"> <input type="checkbox" name="cuisineChoice"  class = "choiceBtn" id="cuisineChoiceBeef" value="southeastasian"> Southeast Asian </label> 
+         <label class="checkmark"> <input type="checkbox" name="cuisineChoice"  class = "choiceBtn" id="cuisineChoiceChicken" value="centralasian">Middle Eastern </label> 
 
                 
         </div>
@@ -123,12 +129,12 @@
         </h3>
         <div  class="btn-grid ">
           
-          <label class="checkmark" check> <input type="checkbox" name="bgtChoice" id="bgt1" value="$20"> <span class = "btnName">&gt; $20</span></label> 
-          <label class="checkmark"> <input type="checkbox" name="bgtChoice" id="bgt2" value="$30-$40"> <span class = "btnName">$30-$40</span></label>
-          <label class="checkmark"> <input type="checkbox" name="bgtChoice" id="bgt3" value="$40-$50"> <span class = "btnName"> $40-$50</span></label>
-          <label class="checkmark"> <input type="checkbox" name="bgtChoice" id="bgt4" value="$50-$70"> <span class = "btnName">$50-$70</span></label>
-          <label class="checkmark"> <input type="checkbox" name="bgtChoice" id="bgt5" value="$80-$100"><span class = "btnName"> $80-$100</span></label>
-          <label class="checkmark"> <input type="checkbox" name="bgtChoice" id="bgt6" value="$100+"> <span class = "btnName">$100+</span></label> 
+          <label class="checkmark" check> <input type="checkbox" name="bgtChoice" class = "choiceBtn"  id="bgt1" value="$20"> &gt; $20</label> 
+          <label class="checkmark"> <input type="checkbox" name="bgtChoice"  class = "choiceBtn" id="bgt2" value="$30-$40"> $30-$40</label>
+          <label class="checkmark"> <input type="checkbox" name="bgtChoice"  class = "choiceBtn" id="bgt3" value="$40-$50">  $40-$50</label>
+          <label class="checkmark"> <input type="checkbox" name="bgtChoice"  class = "choiceBtn" id="bgt4" value="$50-$70"> $50-$70</label>
+          <label class="checkmark"> <input type="checkbox" name="bgtChoice"  class = "choiceBtn" id="bgt5" value="$80-$100"> $80-$100</label>
+          <label class="checkmark"> <input type="checkbox" name="bgtChoice"  class = "choiceBtn" id="bgt6" value="$100+"> $100+</label> 
         </div>
 
       </li>
@@ -138,12 +144,12 @@
         <h3> choose a dietary preference:
         </h3>
         <div  class="btn-grid">
-         <label class="checkmark">  <input type="checkbox" name="dietChoice" id="dietChoiceKsh" value="kosher"> <span class = "btnName">kosher</label>
-         <label class="checkmark">  <input type="checkbox" name="dietChoice" id="dietChoiceVgt" value="vegetarian"><span class = "btnName">vegetarian</label>
-         <label class="checkmark">  <input type="checkbox" name="dietChoice" id="dietChoiceVgn" value="vegan"> <span class = "btnName">vegan</label>
-         <label class="checkmark">  <input type="checkbox" name="dietChoice" id="dietChoiceKto" value="keto"><span class = "btnName"> keto</label>
-         <label class="checkmark">  <input type="checkbox" name="dietChoice" id="dietChoiceNtF" value="nut-free"><span class = "btnName"> nut-free</label>
-         <label class="checkmark">  <input type="checkbox" name="dietChoice" id="dietChoiceSF" value="soy-free"> <span class = "btnName">soy-free</label>
+         <label class="checkmark">  <input type="checkbox" name="dietChoice"  class = "choiceBtn" id="dietChoiceVgt" value="vegetarian"><span class = "btnName">vegetarian</label>
+         <label class="checkmark">  <input type="checkbox" name="dietChoice"  class = "choiceBtn" id="dietChoiceVgn" value="vegan"> <span class = "btnName">vegan</label>
+         <label class="checkmark">  <input type="checkbox" name="dietChoice" class = "choiceBtn" id="dietChoiceKto" value="keto"><span class = "btnName"> keto</label>
+         <label class="checkmark">  <input type="checkbox" name="dietChoice" class = "choiceBtn"  id="dietChoiceNtF" value="nut-free"><span class = "btnName"> nut-free</label>
+         <label class="checkmark">  <input type="checkbox" name="dietChoice"  class = "choiceBtn" id="dietChoiceSF" value="soy-free"> <span class = "btnName">soy-free</label>
+          <label class="checkmark">  <input type="checkbox" name="dietChoice"  class = "choiceBtn" id="dietChoiceNone" value="none"> <span class = "btnName">none</label>
         </div>
     
         <button name="result-btn" class="btn res-btn"> show my results </button>
@@ -151,16 +157,19 @@
    
       
     </ul>
-    
+    <p class="tip"> *scroll if dot controls are missing</p>
   </form>
 
+  <footer>
     <ul class="navlist">
-      <li><a> about </a></li>
       <li><a> project proposal</a></li>
+      <li><a> about </a></li>
       <li><a>wireframe</a></li>
       <li><a>ux report</a></li>
     </ul>
+  </footer>
 
+</main>
   
 
    
@@ -177,9 +186,11 @@
   verticalSwiping:true,
   
 });
+
+
  
   </script>
 
 
-  </body>
+  
 </html>

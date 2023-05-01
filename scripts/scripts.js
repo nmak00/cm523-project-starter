@@ -1,6 +1,7 @@
 /* WRITE YOUR JS HERE... YOU MAY REQUIRE MORE THAN ONE JS FILE. IF SO SAVE IT SEPARATELY IN THE SCRIPTS DIRECTORY */
 
 
+//variables 
 
 const ingredients = Array.from(document.getElementsByName('ingChoice')); 
 
@@ -8,7 +9,12 @@ const budget = Array.from(document.getElementsByName('bgtChoice'));
 
 const diet = Array.from(document.getElementsByName('dietChoice'));
 
-const choices = document.querySelectorAll('.checkmark');
+const cuisine = Array.from(document.getElementsByName('cuisineChoice'));
+
+const choices = document.querySelectorAll('.choiceBtn');
+/* const dietChoice = document.getElementsByName('dietChoice');
+const budgetChoice = document.getElementsByName('bgtChoice');
+const cuisineChoice = document.getElementsByName('cuisineChoice'); */ 
 
 const stCtrl = document.querySelector('.startcontrols');
 const siteName = document.querySelector('#siteName');
@@ -24,13 +30,32 @@ const recSlide = document .querySelector('#recSlide');
 
 
 
-for (var i = 0 ; i < resultBtn.length; i++) {     // from https://stackoverflow.com/a/32027957
-   resultBtn[i].addEventListener('click', getResult ) ; 
+/* const body = document.getElementById("body");
+body.addEventListener('click', closePrompt)
+
+function closePrompt() {
+  slider.classList.add('hide');
+}
+*/
+
+
+
+
+for (let i = 0 ; i < choices.length; i++) {
+  choices[i].addEventListener('click', function(){
+    highlight(this);
+  } ) ; 
 }
 
-for (var i = 0 ; i < choices.length; i++) {
-  choices[i].addEventListener('click', highlight ) ; 
+for (let i = 0 ; i < resultBtn.length; i++) {     // from https://stackoverflow.com/a/32027957
+  resultBtn[i].addEventListener('click', function(){
+    getResult(this);
+  } ) ; 
 }
+
+
+
+
 
 ingredientBtn.addEventListener('click' , startIngredient);
 recipeBtn.addEventListener('click',startRecipe );
@@ -55,11 +80,33 @@ function startRecipe(){
 }
 
 
+$('.slider').on('wheel', (function(e) { // allows scrolling to control slider, from https://medium.com/swlh/implementing-mouse-scroll-in-slick-js-175b5025b79
+  e.preventDefault();
+
+  if (e.originalEvent.deltaY < 0) {
+    $(this).slick('slickNext');
+  } else {
+    $(this).slick('slickPrev');
+  }
+}));
+
+$('#recSlides').on('wheel', (function(e) { 
+  e.preventDefault();
+
+  if (e.originalEvent.deltaY < 0) {
+    $(this).slick('slickNext');
+  } else {
+    $(this).slick('slickPrev');
+  }
+}));
+
+
+
+
 function highlight(item){
- 
       if (item.checked){
         console.log(item.value);
-        item.style.backgroundColor = "red";
+        item.parentElement.classList.toggle("checked");
       }
     
   }; 
@@ -67,12 +114,19 @@ function highlight(item){
   
 
 
-function getResult(){
+function getResult(item){
   const result = {
+    cuisine:[],
     ingredients:[],
     budget:[],
     diet:[],
   };
+
+  cuisine.forEach(item => {
+    if(item.checked){
+     result.diet.push(item.value);
+    }
+  });
   
 ingredients.forEach(item => {
     if(item.checked){
@@ -91,6 +145,8 @@ ingredients.forEach(item => {
      result.diet.push(item.value);
     }
   }); 
+
+  
   
   console.log(result); 
 
