@@ -24,21 +24,37 @@
 
 body{
   font-family:sans-serif; 
-  background:blue; 
-  color: white; 
+  background: #eaebdd; 
+  color: #4a4539; 
+  padding: 2em; 
+
+  
 }
 
 .hide
 {
   display:none; 
+  animation: fadeOut 2s; 
+
+}
+
+#subheading
+{
+  margin-top:6em;
+  font-size: 1.1em; 
+  line-height: 1.5; 
+  
 
 }
 
 
 
+
 .startcontrols 
 {
-  text-align: center; 
+  text-align: center;
+  
+  margin-top: 3em; 
   
 }
 .startcontrols button
@@ -47,8 +63,10 @@ body{
   border-radius:25px; 
   background: orange;
   border: orange solid; 
-  width: 8em;  
-  height: 3em;
+  width: 110px;  
+  height: 40px; 
+  
+  
 }
 
 .res-btn:hover, .startcontrols button:hover {
@@ -59,43 +77,88 @@ body{
 }
 
 
+
 .slider
 {
   
   display: flex; 
   flex-flow: row;
   flex-wrap: wrap;
-  padding: 1em; 
   position: relative; 
+  align-content: space-around;
   top: 300px; 
+  width: 100%; 
   border: none; 
-  background:blue;
- 
+  animation:fadeIn 1s;   
+}
+
+ .slick-dots 
+{
+  appearance:none; 
+  position:absolute;
+  right: 40px; 
+  top:60px;
+  
   
 }
+
+.slick-dots li button 
+{
+  font-size: 0;
+line-height: 0;
+display: block;
+width: 0px;
+height: 30px;
+padding: 5px;
+cursor: pointer;
+color: transparent;
+border: 0;
+outline: none;
+background: transparent;
+}
+
 
 .promptcontainer
 {
   display: flex; 
-  flex-flow: row;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
+  align-self:center;
   list-style: none; 
-  height: 30vh; 
-  width: 30vw;
-  padding: 2em; 
-  
+  position: relative; 
+  margin: 25px;
+
+  height: 300px; 
+
+}
+
+#slick-slide02{
+  padding-top: 10rem; 
+}
+
+#recSlide .slider
+{
+  animation:fadeIn 1s;
+}
+
+#recSlide .promptcontainer
+{
+  height: 300px; 
 }
 
 .promptcontainer h3 {
   width:100%; 
+  padding-bottom: 15px; 
+  font-size: 1.5em; 
+ 
 
 }
 .btn-grid
 {
   display: flex; 
   flex-flow: wrap; 
-  width: 600px;
-  
+  justify-content:space-evenly;
+  width: 80%;
+  overflow: scroll; 
   
 }
 
@@ -108,15 +171,18 @@ body{
   
    
 }
+
+
+
 .checkmark 
 {
   border-radius:25px; 
   background: #5de359;
   border: none ; 
-  width: 6rem;
-  height: 3rem; 
+  width: 120px;
+  height: 30px; 
   text-align: center;
-  margin:0 auto; 
+  margin: 2px; 
   transition:.3s; 
   box-sizing: border-box;
   
@@ -129,7 +195,7 @@ body{
 		top: 30%;
 }
 
-.checkmark:hover, input:checked
+.checkmark:hover
 {
   cursor: pointer;
   background-color: #83f57a;
@@ -159,11 +225,70 @@ body{
   margin:0;
 }
 
+.navlist
+{
+  
+  text-align: right;
+  list-style: none; 
+  line-height: 2; 
+  position: fixed; 
+  bottom: 0px;
+  right: 40px; 
+  font-size: 16px;
+  background: #eaebdd;
+  display: flex; 
+  justify-content: space-between;
+  width: 90%; 
+  height: 50px; 
+
+}
+
+.navList li{
+  display: flex; 
+  margin: 10px; 
+  align-items: center; 
+}
+
+.navlist a:hover {
+  border-bottom: solid 2px #83f57a;
+  transition: .3s; 
+}
+
+
+/* ===== Results =====  */
+
+.resultcontainer{
+  background: #eaebdd;
+}
+
+.mealResult{
+  background: #d9cbb6;
+  border-radius: 25px;
+  width: 80%;
+
+  margin: auto 3em; 
+  margin-top: 2em; 
+}
+
+.mealImage{
+  border-radius: 25px; 
+  width: 35%;
+  height: 100%;  
+  position: relative; 
+  float:right; 
+  overflow:auto; 
+  margin-right: 2em; 
+  
+  
+  
+}
+
+
 /* ===== typography=====  */
 
 header a
 {
-  color: white; 
+  color: #4a4539; 
   text-decoration:none; 
   font-weight:lighter; 
 }
@@ -180,15 +305,116 @@ header a
 
 }
 
-header p 
-{ 
-  margin: 2em; 
-}
 
- button a{
+
+ button a, button {
   text-decoration: none; 
   color: black; 
+  font-size: .9em;
 }
 
+
+
+.mealName
+{
+  padding: 1em; 
+  font-size: 30px; 
+}
+
+.mealDescription{
+  width: 60%; 
+  margin-left: 1em; 
+  padding: 1em; 
+
+}
+.resultHeader{
+  padding-top: 2em; 
+  font-size: 30px; 
+}
+.circle
+{
+  border-radius:50%;
+  background: #5de359; 
+  width: 1em; 
+  height: 1em; 
+  display: inline-block; 
+}
+
+@keyframes fadeIn { /* learned from W3 Schools */
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut { /* learned from W3 Schools */
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+@media screen and (min-width: 650px) 
+{
+  body
+  {
+    
+    margin: auto; 
+    
+  }
+
+  #subheading
+  {
+    max-width: 700px; 
+    margin-left: 15% ; 
+  }
+
+  .startcontrols button{
+    width: 140px; 
+    height: 50px; 
+  }
+
+  .slider{
+
+    width: 900px; 
+    margin: auto; 
+     
+  }
+
+  .promptcontainer
+  {
+    width: 100%; 
+  }
+
+  .checkmark
+  {
+    width: 130px;
+    height: 50px;
+  }
+  .navList {
+
+    flex-direction: column; 
+   }
+ 
+
+   #slick-slide02{
+    padding-top: 3.5rem; 
+  }
+
+  .res-btn{
+    margin-top: 10px; 
+    position: relative; 
+    left: 35%; 
+    width: 130px;
+    font-size: 16px;  
+  }
+
+}
 
 
