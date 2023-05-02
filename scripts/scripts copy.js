@@ -4,6 +4,43 @@
 
 
 
+// ingredient data
+
+var ingData = [
+  {
+      "id": "white fish",
+      "ingredient": "dashi",
+      "budget": "2"
+    },
+
+    {
+      "id": "air-plant",
+      "plant_name": "Air Plant",
+      "description": "Lorem Ipsum",
+      "plantSize": "1",
+      "plantWater": "4",
+      "plantLight": "1",
+      "plantExtra": "2",
+      "plantMove": "4",
+      "plantType": "2",
+      "plantNeglect": "1",
+      "page": "air-plant.html"
+    },
+    {
+      "id": "aloe-vera",
+      "plant_name": "Aloe Vera",
+      "description": "Lorem Ipsum",
+      "plantSize": "2",
+      "plantWater": "2",
+      "plantLight": "1",
+      "plantExtra": "3",
+      "plantMove": "2",
+      "plantType": "3",
+      "plantNeglect": "1",
+      "page": "aloe-vera.html"
+    }
+
+  ];
 
 
 
@@ -16,6 +53,8 @@ const budget = Array.from(document.getElementsByName('bgtChoice'));
 const diet = Array.from(document.getElementsByName('dietChoice'));
 
 const cuisine = Array.from(document.getElementsByName('cuisineChoice'));
+
+const argsAPI = ['cuisine', 'time', 'diet'];
 
 const choices = document.querySelectorAll('.choiceBtn');
 /* const dietChoice = document.getElementsByName('dietChoice');
@@ -156,12 +195,14 @@ ingredients.forEach(item => {
   
   console.log(result); 
 
-  fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=3edf67867c174ea29558a51742844a58`
-  ).then(response => response.json())
-  .then(data => console.log(data));
 
   }
 
-  
+  function openResult()
+  {
+   
+    var opened = window.open("");
+opened.document.write("<html><head><title>MyTitle</title></head><body>test</body></html>");
+  }
 
   

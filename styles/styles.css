@@ -318,8 +318,9 @@ background: transparent;
 
 }
 .resultHeader{
-  padding-top: em; 
+  padding-top: 2em; 
   font-size: 30px; 
+  animation: fadeIn 1s;
 }
 .circle
 {
@@ -328,6 +329,7 @@ background: transparent;
   width: 1em; 
   height: 1em; 
   display: inline-block; 
+  animation: fadeIn 1s;
 }
 
 .learn-btn 
@@ -348,15 +350,29 @@ background: transparent;
 
 .subName 
 {
-  
+  display: flex; 
+  flex-direction: row; 
   border: #4b694a solid; 
   border-radius:25px; 
-  width: 5em;  
-  height: 1em; 
-  padding: .5em; 
-  margin: 2em; 
+  width: 130px;
+  height: 3.5em; 
+  
+  text-align: center; 
+  align-items: center;
+  padding: 1.3em; 
+  font-size: 1em; 
+  transition:.3s; 
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
   
 }
+
+.ingGrid
+{
+  max-width: 400px; 
+}
+
+
 
 .ingResult{
   border: #d9cbb6 solid ;
@@ -365,12 +381,19 @@ background: transparent;
   width: 90%;
   margin: auto ; 
   margin-top: 2em; 
+  margin-bottom: 2em; 
   padding: 1em; 
+  animation: fadeIn 1s; 
+}
+
+.abtGrid label 
+{
+  margin-bottom: 1em; 
 }
 
 /* ===== typography=====  */
 
-header a
+a
 {
   color: #4a4539; 
   text-decoration:none; 
@@ -550,14 +573,18 @@ background: transparent;
   {
     margin-top: 1.5em; 
   }
-
+#slick-slide02  {
+  padding-top: 7rem;
+}
+ 
   .btn-grid
 {
   width: 400px; 
 }
 .slider
 {
-  padding-left:0; 
+  padding-left:0;
+   
 }
 }
 
