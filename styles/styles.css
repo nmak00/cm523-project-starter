@@ -134,9 +134,9 @@ background: transparent;
 
 }
 
-#slick-slide02{
-  padding-top: 10rem; 
-}
+
+
+
 
 #recSlide .slider
 {
@@ -237,15 +237,7 @@ background: transparent;
   transform: scaleX(1.03) scaleY(1.03);
   margin:0;
 }
-.tip
-{
-  position: relative; 
-  top: 7em; 
-  left: 3em;
-  animation: fadeIn 1s;
-  color:#4b694a;
- 
-}
+
 
 #recSlide .tip 
 {
@@ -254,26 +246,29 @@ background: transparent;
 
 .navlist
 {
-  
+
+  display:flex; 
+  flex-direction: row; 
   text-align: right;
   list-style: none; 
-  line-height: 2; 
-  position: fixed; 
-  bottom: 0;  
-  right: 40px; 
-  font-size: 16px;
-  background: #eaebdd;
-  display: flex; 
-  justify-content: space-between;
+  line-height: 2.5; 
+  position: absolute; 
+  bottom: 1em; 
+  flex-wrap: wrap; 
+ font-size: .9em;
+  justify-content: space-evenly;
+  gap: .5em; 
   width: 90%; 
-  height: 50px; 
-  transition: top .3s 
+  padding-left: 0; 
+  
+  
 }
 
-.navList li{
+.navList li {
   display: flex; 
   margin: 10px; 
   align-items: center; 
+  
 }
 
 .navlist a:hover {
@@ -312,7 +307,7 @@ background: transparent;
 
 .mealName
 {
-  padding: 1em; 
+  padding: .5em; 
   font-size: 30px; 
 }
 
@@ -323,7 +318,7 @@ background: transparent;
 
 }
 .resultHeader{
-  padding-top: 2em; 
+  padding-top: em; 
   font-size: 30px; 
 }
 .circle
@@ -344,10 +339,34 @@ background: transparent;
   height: 40px; 
   margin: 1em;
   
+
+}
+
+
+/* ===== Ingredients  =====  */
+
+
+.subName 
+{
   
+  border: #4b694a solid; 
+  border-radius:25px; 
+  width: 5em;  
+  height: 1em; 
+  padding: .5em; 
+  margin: 2em; 
   
 }
 
+.ingResult{
+  border: #d9cbb6 solid ;
+  border-radius: 25px;
+  min-width: 300px;
+  width: 90%;
+  margin: auto ; 
+  margin-top: 2em; 
+  padding: 1em; 
+}
 
 /* ===== typography=====  */
 
@@ -423,10 +442,14 @@ header a
   {
     max-width: 900px; 
     margin: auto; 
-    padding: 4em; 
+    padding: 4em;  
 
   }
 
+  #subheading p
+  {
+      font-size: 18px; 
+  }
   .startcontrols button{
     width: 140px; 
     height: 50px; 
@@ -434,14 +457,18 @@ header a
 
   .slider{
 
-    width: 900px; 
+    width: 950px;  
     margin: auto; 
+    padding: 0; 
      
   }
 
-  .promptcontainer
+
+
+  #ingSlide .promptcontainer
   {
     width: 100%; 
+    height: 400px; 
   }
 
   .checkmark
@@ -456,8 +483,10 @@ header a
  
 
    #slick-slide02{
-    padding-top: 3.5rem; 
+    padding-top: 0; 
   }
+
+  
 
   .res-btn{
     margin-top: 10px; 
@@ -465,15 +494,10 @@ header a
     left: 35%; 
     width: 130px;
     font-size: 16px;  
+     
   }
 
-  .navList  {
-
-  
-    display: block;
-    width: 40%;
-    text-align: right; 
-   }
+ 
  
   .slick-dots li button 
 {
@@ -514,49 +538,130 @@ background: transparent;
 
 }
 
-@media screen and (max-width: 768px) 
+@media screen and (max-width: 750px) 
 {
   body
   {
-    
     margin: auto; 
-    
+
   }
- 
-  #slick-slide02{
-    padding-top: 3.5rem; 
-  }
-
- 
-
-  
-}
-
-
-
-@media screen and (max-width: 400px) 
-{
-  body
-  {
-    
-    margin: auto; 
-    
-  }
- 
- 
 
   #subheading
   {
-    max-width: 200px; 
-    padding: 0; 
-    margin-top: 1em; 
-    padding-bottom: 3em; 
+    margin-top: 1.5em; 
   }
 
-  #recSlides .tip
+  .btn-grid
+{
+  width: 400px; 
+}
+.slider
+{
+  padding-left:0; 
+}
+}
+
+
+@media screen and (max-width: 450px) 
+{
+  body
   {
-    margin-top: 10em; 
+    margin: auto; 
+   
+
   }
+  #headerBox
+  {
+    padding-top: 0; 
+  }
+
+  #fawn
+  {
+    font-size: 3em;
+  }
+  #overLine {
+    width: 6em; 
+  }
+  #faan
+  {
+    font-size: 2.6em;
+  }
+ 
+ 
+
+  #recSlides .slider 
+  {
+    position: absolute;
+    top: 400px;
+  }
+
+
+ .slick-dots li {
+    display: none; 
+  }
+  
+
+  #subheading
+  {
+    max-width: 400px; 
+    min-width: 200px;
+    padding: 0; 
+   
+   
+  }
+
+  .startcontrols button, .res-btn
+  {
+    width: 100px;
+    height: 40px;
+    
+  } 
+
+  #slick-slide02 {
+    padding-top: 4rem;
+  }
+
+  #slick-slide10 .checkmark {
+    width: 130px; 
+  }
+ 
+ 
+
+.res-btn:hover, 
+.startcontrols button:hover {
+  cursor:pointer; 
+  transition:.3s;
+  transform: scaleX(1.03) scaleY(1.03);
+  margin:0;
+}
+  #subheading p
+  {
+    font-size: .9em; 
+  }
+
+
+  
+ li a
+{
+  font-size: .9em; 
+}
+
+  .checkmark  {
+    width: 100px;
+  height: 30px;
+  padding: .3em;
+}
+  
+.btn-grid
+{
+  width: 250px; 
+}
+  
+.promptcontainer{
+  margin-left: 0; 
+  margin-top: 0;
+  padding-top: 0; 
+}
 
   
   

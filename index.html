@@ -50,7 +50,7 @@
     <ul class = "slider ">
   
       <li id="qIngredient" class=" promptcontainer">
-        <h3> choose an ingredient:
+        <h3> choose some ingredients:
         </h3>
         <div  class="btn-grid">
           
@@ -70,7 +70,7 @@
       
       </li>
       <li id="qBudget" class="promptcontainer">
-        <h3> choose a budget:
+        <h3> choose your budget:
         </h3>
         <div  class="btn-grid ">
           
@@ -86,7 +86,7 @@
     
 
       <li id="qDiet" class="promptcontainer">
-        <h3> choose a dietary preference:
+        <h3> choose your dietary preferences:
         </h3>
         <div  class="btn-grid">
          <label class="checkmark">  <input type="checkbox" name="dietChoice" class = "choiceBtn"  id="dietChoiceVgt" value="vegetarian">vegetarian</label>
@@ -102,7 +102,7 @@
    
       
     </ul>
-    <p class="tip"> *scroll if dot controls are missing</p>
+    
 
   </form>
             
@@ -110,9 +110,9 @@
 
   <form action="results.html" class ="slideBox hide" id= "recSlide" >
     <ul class = "slider ">
-  
+
       <li id="qCuisine" class=" promptcontainer">
-        <h3> choose a cuisine:
+        <h3> choose your cuisines:
         </h3>
         <div  class="btn-grid">
           
@@ -124,32 +124,29 @@
                 
         </div>
         </li>
-      <li id="qBudget" class="promptcontainer">
-        <h3> choose a budget:
+      <li id="qTime" class="promptcontainer">
+        <h3> choose a time:
         </h3>
         <div  class="btn-grid ">
           
-          <label class="checkmark" check> <input type="checkbox" name="bgtChoice" class = "choiceBtn"  id="bgt1" value="$20"> &gt; $20</label> 
-          <label class="checkmark"> <input type="checkbox" name="bgtChoice"  class = "choiceBtn" id="bgt2" value="$30-$40"> $30-$40</label>
-          <label class="checkmark"> <input type="checkbox" name="bgtChoice"  class = "choiceBtn" id="bgt3" value="$40-$50">  $40-$50</label>
-          <label class="checkmark"> <input type="checkbox" name="bgtChoice"  class = "choiceBtn" id="bgt4" value="$50-$70"> $50-$70</label>
-          <label class="checkmark"> <input type="checkbox" name="bgtChoice"  class = "choiceBtn" id="bgt5" value="$80-$100"> $80-$100</label>
-          <label class="checkmark"> <input type="checkbox" name="bgtChoice"  class = "choiceBtn" id="bgt6" value="$100+"> $100+</label> 
-        </div>
-
+          <label class="checkmark" check> <input type="checkbox" name="timeChoice" class = "choiceBtn"  id="1" value=10-15>  10-15 mins </label> 
+          <label class="checkmark"> <input type="checkbox" name="timeChoice"  class = "choiceBtn" id="2" value= 20-30> 20-30mins </label>
+          <label class="checkmark"> <input type="checkbox" name="timeChoice"  class = "choiceBtn" id="3" value="$40-$50"> 45-60mins </label>
+          <label class="checkmark"> <input type="checkbox" name="timeChoice"  class = "choiceBtn" id="4" value="$50-$70"> 1hr+</label>
+         
       </li>
     
 
       <li id="qDiet" class="promptcontainer">
-        <h3> choose a dietary preference:
+        <h3> choose your dietary preferences:
         </h3>
         <div  class="btn-grid">
-         <label class="checkmark">  <input type="checkbox" name="dietChoice"  class = "choiceBtn" id="dietChoiceVgt" value="vegetarian"><span class = "btnName">vegetarian</label>
-         <label class="checkmark">  <input type="checkbox" name="dietChoice"  class = "choiceBtn" id="dietChoiceVgn" value="vegan"> <span class = "btnName">vegan</label>
-         <label class="checkmark">  <input type="checkbox" name="dietChoice" class = "choiceBtn" id="dietChoiceKto" value="keto"><span class = "btnName"> keto</label>
-         <label class="checkmark">  <input type="checkbox" name="dietChoice" class = "choiceBtn"  id="dietChoiceNtF" value="nut-free"><span class = "btnName"> nut-free</label>
-         <label class="checkmark">  <input type="checkbox" name="dietChoice"  class = "choiceBtn" id="dietChoiceSF" value="soy-free"> <span class = "btnName">soy-free</label>
-          <label class="checkmark">  <input type="checkbox" name="dietChoice"  class = "choiceBtn" id="dietChoiceNone" value="none"> <span class = "btnName">none</label>
+         <label class="checkmark">  <input type="checkbox" name="dietChoice"  class = "choiceBtn" id="dietChoiceVgt" value="vegetarian">vegetarian</label>
+         <label class="checkmark">  <input type="checkbox" name="dietChoice"  class = "choiceBtn" id="dietChoiceVgn" value="vegan"> vegan</label>
+         <label class="checkmark">  <input type="checkbox" name="dietChoice" class = "choiceBtn" id="dietChoiceKto" value="keto"> keto</label>
+         <label class="checkmark">  <input type="checkbox" name="dietChoice" class = "choiceBtn"  id="dietChoiceNtF" value="nut-free"> nut-free</label>
+         <label class="checkmark">  <input type="checkbox" name="dietChoice"  class = "choiceBtn" id="dietChoiceSF" value="soy-free"> soy-free</label>
+          <label class="checkmark">  <input type="checkbox" name="dietChoice"  class = "choiceBtn" id="dietChoiceNone" value="none"> none</label>
         </div>
     
         <button name="result-btn" class="btn res-btn"> show my results </button>
@@ -157,14 +154,14 @@
    
       
     </ul>
-    <p class="tip"> *scroll if dot controls are missing</p>
+   
   </form>
 
   <footer>
     <ul class="navlist">
-      <li><a> project proposal</a></li>
       <li><a> about </a></li>
-      <li><a>wireframe</a></li>
+      <li><a href="https://drive.google.com/file/d/1-wjdb0g5dnwzsLC6YRcXpkzsdRP5erN8/view?usp=sharing"> project proposal</a></li>
+      <li><a> wireframe</a></li>
       <li><a>ux report</a></li>
     </ul>
   </footer>
@@ -184,7 +181,9 @@
   arrows:false,
   accessibility:true,
   verticalSwiping:true,
-  
+  speed: 900,
+
+
 });
 
 
