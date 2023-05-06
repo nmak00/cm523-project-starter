@@ -252,8 +252,8 @@ background: transparent;
   text-align: right;
   list-style: none; 
   line-height: 2.5; 
-  position: absolute; 
-  bottom: 1em; 
+  position: fixed; 
+  bottom: .8em; 
   flex-wrap: wrap; 
  font-size: .9em;
   justify-content: space-evenly;
@@ -266,7 +266,7 @@ background: transparent;
 
 .aboutnav
 {
-  position: absolute; 
+  position: fixed; 
   top:140vh;
   padding-left: 0; 
 }
@@ -363,11 +363,10 @@ background: transparent;
   border-radius:25px; 
   width: 130px;
   height: 3.5em; 
-  
   text-align: center; 
   align-items: center;
   padding: 1.3em; 
-  font-size: 1em; 
+  font-size: .8em; 
   transition:.3s; 
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
@@ -376,7 +375,9 @@ background: transparent;
 
 .ingGrid
 {
-  max-width: 400px; 
+  width: 100%; 
+  display: flex; 
+  justify-content: flex-start
 }
 
 
