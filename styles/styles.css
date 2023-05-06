@@ -264,11 +264,11 @@ background: transparent;
   
 }
 
-.navList li {
-  display: flex; 
-  margin: 10px; 
-  align-items: center; 
-  
+.aboutnav
+{
+  position: absolute; 
+  top:140vh;
+  padding-left: 0; 
 }
 
 .navlist a:hover {
@@ -317,6 +317,13 @@ background: transparent;
   padding: 1em; 
 
 }
+.descriptionText
+{
+  padding:1.5em; 
+  width: 100%; 
+  padding-top: 0; 
+}
+
 .resultHeader{
   padding-top: 2em; 
   font-size: 30px; 
@@ -386,9 +393,15 @@ background: transparent;
   animation: fadeIn 1s; 
 }
 
+.abtGrid
+{
+ padding-right:3em; ; 
+}
+
 .abtGrid label 
 {
   margin-bottom: 1em; 
+  
 }
 
 /* ===== typography=====  */
@@ -499,7 +512,7 @@ a
     width: 130px;
     height: 50px;
   }
-  .navList {
+  .navlist {
 
     flex-direction: column; 
    }

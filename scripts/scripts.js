@@ -17,23 +17,26 @@ const diet = Array.from(document.getElementsByName('dietChoice'));
 
 const cuisine = Array.from(document.getElementsByName('cuisineChoice'));
 
-const choices = document.querySelectorAll('.choiceBtn');
-/* const dietChoice = document.getElementsByName('dietChoice');
-const budgetChoice = document.getElementsByName('bgtChoice');
-const cuisineChoice = document.getElementsByName('cuisineChoice'); */ 
+const time = Array.from(document.getElementsByName('timeChoice'));
 
+//buttons 
+const choices = document.querySelectorAll('.choiceBtn');
+const result1 = document.getElementById('result1');
+const result2 = document.getElementById('result2');
+const ingredientBtn = document.getElementById('ing-btn');
+const recipeBtn = document.getElementById('rec-btn');
+
+//section transitions 
 const stCtrl = document.querySelector('.startcontrols');
 const siteName = document.querySelector('#siteName');
 const subhead = document.querySelector('#subheading');
-const ingredientBtn = document.getElementById('ing-btn');
-const recipeBtn = document.getElementById('rec-btn');
+
 const sections = Array.from(document.getElementsByClassName('promptcontainer'));
 const slideContainer = document.querySelector('.slideBox');
 const slider = document.querySelector('.slider');
-const resultBtn = document.getElementsByName('result-btn');
+
 const recSlide = document .querySelector('#recSlide');
 
-console.log(recipeBtn);
 
 
 /* const body = document.getElementById("body");
@@ -45,7 +48,8 @@ function closePrompt() {
 */
 
 
-
+ingredientBtn.addEventListener('click' , startIngredient);
+recipeBtn.addEventListener('click',startRecipe );
 
 for (let i = 0 ; i < choices.length; i++) {
   choices[i].addEventListener('click', function(){
@@ -53,18 +57,8 @@ for (let i = 0 ; i < choices.length; i++) {
   } ) ; 
 }
 
-for (let i = 0 ; i < resultBtn.length; i++) {     // from https://stackoverflow.com/a/32027957
-  resultBtn[i].addEventListener('click', function(){
-    getResult(this);
-  } ) ; 
-}
-
-
-
-
-
-ingredientBtn.addEventListener('click' , startIngredient);
-recipeBtn.addEventListener('click',startRecipe );
+result1.addEventListener('click',
+    getIngredient) ; 
 
 
 
@@ -120,24 +114,17 @@ function highlight(item){
   
 
 
-function getResult(item){
-  console.log(item);
+function getIngredient(){
   const result = {
-    cuisine:[],
     ingredients:[],
     budget:[],
     diet:[],
   };
 
-  cuisine.forEach(item => {
-    if(item.checked){
-     result[cuisine].push(item.value);
-    }
-  });
-  
+ 
 ingredients.forEach(item => {
     if(item.checked){
-      result.ingredients.push(item.value); 
+      result.ingredients.push(item.value);  // push function only reports length of string. but need to find a way to show contents of a string. 
     }
   }); 
 
@@ -149,16 +136,17 @@ ingredients.forEach(item => {
  
  diet.forEach(item => {
     if(item.checked){
-     result.diet.push(item.value);
+      result.diet.push(item.value);
     }
   }); 
 
   
-  console.log(result); 
+  console.log('result: %O', result ); //finally!!! learned this from https://stackoverflow.com/questions/7912576/console-log-showing-contents-of-array-object
 
-  fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=3edf67867c174ea29558a51742844a58`
-  ).then(response => response.json())
-  .then(data => console.log(data));
+  Storage.setItem('result: %O', result);
+
+  window.open("ingredients.html");
+
 
   }
 
