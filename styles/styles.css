@@ -264,11 +264,20 @@ background: transparent;
   
 }
 
+
 .aboutnav
 {
   position: fixed; 
-  top:140vh;
-  padding-left: 0; 
+  top: 90vh;
+  left: 3em;;
+  margin-top: 3em; 
+   
+}
+
+#attributions
+{
+  margin-bottom:3em; 
+  
 }
 
 .navlist a:hover {
@@ -398,6 +407,7 @@ background: transparent;
 {
  padding-right:3em; ; 
 }
+
 
 .abtGrid label 
 {
@@ -587,8 +597,8 @@ background: transparent;
   {
     margin-top: 1.5em; 
   }
-#slick-slide02  {
-  padding-top: 7rem;
+#slick-slide02 {
+  padding-top: 10rem;
 }
  
   .btn-grid
