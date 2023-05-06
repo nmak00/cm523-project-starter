@@ -259,7 +259,7 @@ a.forEach(sub => {
             
         
        subList[sub].push(data[i].id);   
-       subNames += `<label class = "subName" > ${data[i].id}   </label>`;       
+       subNames += `<label class = "subName" > ${data[i].id}   </label>`;   // got this idea from https://github.com/prabinmagar/meal-search-api-vanilla-js/blob/master/script.js    
     } 
   }
   html+= `<div class = "ingResult">
