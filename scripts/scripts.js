@@ -140,16 +140,21 @@ ingredients.forEach(item => {
     }
   }); 
 
+ 
+ //finally!!! learned this from https://stackoverflow.com/questions/7912576/console-log-showing-contents-of-array-object
+
+  let userInput= localStorage.setItem('result',JSON.stringify(result));
+
+  window.location.assign("ingredients.html");  // transfers data to this page 
+
+ 
+
+}
+
+
+
+
   
-  console.log('result: %O', result ); //finally!!! learned this from https://stackoverflow.com/questions/7912576/console-log-showing-contents-of-array-object
-
-  Storage.setItem('result: %O', result);
-
-  window.open("ingredients.html");
-
-
-  }
 
   
-
   
